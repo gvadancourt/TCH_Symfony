@@ -1,3 +1,4 @@
+BONJOUR
 <?php
 	//On se place dans le namespace des contrôleurs de notre bundle
     namespace SiteGKT\GSBBundle\Controller;
