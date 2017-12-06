@@ -10,10 +10,11 @@
 		<tr><th>Nom commercial</th><th>Effets</th><th>Prix d'un échantillon</th><th>Dépot légal</th><th>Contre-indications</th><th>Actions</th></tr>
 		{% for unMedicament in Medicaments %}
 			
-				<tr><td text-align:center>{{unMedicament.MED_Nomcommercial}}</td>
+				<tr><td>{{unMedicament.MED_DepotLegal}}</td>
+				<td>{{unMedicament.MED_Nomcommercial}}</td>
 				<td>{{unMedicament.MED_Effets}}</td>
 				<td>{{unMedicament.MED_PrixEchantillon}}</td>
-				<td>{{unMedicament.MED_DepotLegal}}</td>
+				
 				<td>{{unMedicament.MED_ContreIndic}}</td>
 				<td>
 					<a href ="{{path('SiteTCHblog_modifier', {'id':unMedicament.id}) }}" class="btn">

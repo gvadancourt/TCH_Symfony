@@ -73,7 +73,7 @@ class __TwigTemplate_b60aa39973a6137175d52c3fca4c71da5e9aaf1126124d66cde48de2f68
         // line 33
         echo $this->env->getExtension('routing')->getPath("SiteGKTGSB_AjouterFamille");
         echo "\">Ajouter une famille</a></li>
-\t\t\t\t\t</ul>
+\t\t\t\t\t</ul>fezffezzezefefef
 \t\t\t\t</div>
 \t\t\t\t<div id=\"content\" class=\"span9\">
 \t\t\t\t\t<!-- Création du bloc \"body\" sans contenu par défaut -->

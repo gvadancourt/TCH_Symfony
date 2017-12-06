@@ -499,3 +499,6 @@ b8a633,::1,GET,http://localhost/TCH_Symfony/web/app_dev.php/GSB/Medicaments,1512
 0ea130,::1,GET,http://localhost/TCH_Symfony/web/app_dev.php/GSB/ModifierFamille/1,1512565736,
 6a3784,::1,GET,http://localhost/TCH_Symfony/web/app_dev.php/GSB/Compositions,1512565750,
 058bac,::1,GET,http://localhost/TCH_Symfony/web/app_dev.php/GSB/AjouterComposition,1512565753,
+801035,::1,GET,http://localhost/TCH_Symfony/web/app_dev.php/GSB,1512567918,
+989074,::1,GET,http://localhost/TCH_Symfony/web/app_dev.php/GSB,1512567920,
+d351af,::1,GET,http://localhost/TCH_Symfony/web/app_dev.php/GSB/Medicaments,1512567921,

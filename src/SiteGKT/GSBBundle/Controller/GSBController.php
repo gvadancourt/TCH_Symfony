@@ -13,7 +13,7 @@
 	use SiteGKT\GSBBundle\Form\CompositionModificationType;
 	use SiteGKT\GSBBundle\Entity\Composition;
 
-	Bonjour
+	
 	//Le nom de notre contrôleur respecte le nom du fichier pour que l'autoload fonctionne.
     class GSBController extends Controller
     {
