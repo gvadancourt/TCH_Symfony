@@ -43,7 +43,7 @@
 			
 			return $this->render ('SiteGKTGSBBundle:GSB:ListeMedicament.html.twig', array('Medicaments'=>$Medicaments));
 		}
-		
+		Salut
 		public function VoirListeCompositionAction()
 		{
 			//Récupération de l'EntityManager
