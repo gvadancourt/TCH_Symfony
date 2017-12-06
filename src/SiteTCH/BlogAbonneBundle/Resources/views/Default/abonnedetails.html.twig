@@ -1,0 +1,17 @@
+{% extends "SiteTCHBlogBundle::layout.html.twig" %}
+	{% block title %}
+		Accueil - {{ parent () }}
+	{% endblock %}
+	{% block TCHblog_body %}
+		<ul>
+			{% if abonne.photo is not null %}
+				<img src="{{abonne.photo.url}}" alt="" />
+			{% endif %}
+			{{abonne.prenom}} {{abonne.nom}} - {{abonne.email}}
+		</ul>
+	
+		<a href ="{{path('SiteTCHblog_accueil')}}" class="btn">
+			<i class ="icon-chevron-left"></i>
+			Retour à la liste
+		</a>
+	{% endblock %}

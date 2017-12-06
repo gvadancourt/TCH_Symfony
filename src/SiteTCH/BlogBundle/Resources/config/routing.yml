@@ -1,0 +1,19 @@
+SiteTCHblog_accueil:
+    path:       /
+    defaults: {_controller: SiteTCHBlogBundle:Blog:index }
+SiteTCHblog_voir:
+    path:       /article/{id}
+    defaults: {_controller: SiteTCHBlogBundle:Blog:voir }
+SiteTCHblog_ajouter:
+    path:       /ajouter
+    defaults: {_controller: SiteTCHBlogBundle:Blog:ajouter }
+SiteTCHblog_modifier:
+    path:       /modifier/{id}
+    defaults: {_controller: SiteTCHBlogBundle:Blog:modifier }
+    requirements:
+        id: \d+
+SiteTCHblog_supprimer:
+    path:       /supprimer/{id}
+    defaults: {_controller: SiteTCHBlogBundle:Blog:supprimer }
+    requirements:
+        id: \d+

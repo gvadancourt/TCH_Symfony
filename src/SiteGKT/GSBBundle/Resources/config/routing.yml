@@ -1,0 +1,56 @@
+site_gktgsb_homepage:
+    pattern:  /bonjour/{name}
+    defaults: { _controller: SiteGKTGSBBundle:Default:index }
+SiteGKTGSB_accueil:
+    path:       /GSB
+    defaults: {_controller: SiteGKTGSBBundle:GSB:index }
+
+SiteGKTGSB_listemedicament:
+    path:       /GSB/Medicaments
+    defaults: {_controller: SiteGKTGSBBundle:GSB:VoirListeMedicament }
+
+SiteGKTGSB_listefamille:
+    path:       /GSB/Familles
+    defaults: {_controller: SiteGKTGSBBundle:GSB:VoirListeFamille }
+    
+SiteGKTGSB_listecomposition:
+    path:       /GSB/Compositions
+    defaults: {_controller: SiteGKTGSBBundle:GSB:VoirListeComposition }
+
+SiteGKTGSB_AjouterComposition:
+    path : /GSB/AjouterComposition
+    defaults: {_controller: SiteGKTGSBBundle:GSB:ajouterComposition}
+    
+SiteGKTGSB_ModifierComposition:
+    path:       /GSB/ModifierComposition/{id}
+    defaults: {_controller: SiteGKTGSBBundle:GSB:ModifierComposition }
+    requirements:
+        id: \d+
+
+SiteGKTGSB_SupprimerComposition:
+    path:       /GSB/SupprimerComposition/{id}
+    defaults: {_controller: SiteGKTGSBBundle:GSB:SupprimerComposition }
+    requirements:
+        id: \d+
+ 
+SiteGKTGSB_AjouterFamille:
+    path:       /GSB/AjouterFamille
+    defaults: {_controller: SiteGKTGSBBundle:GSB:ajouterFamille }
+
+SiteGKTGSB_ModifierFamille:
+    path:       /GSB/ModifierFamille/{id}
+    defaults: {_controller: SiteGKTGSBBundle:GSB:ModifierFamille }
+    requirements:
+        id: \d+
+
+SiteGKTGSB_SupprimerFamille:
+    path:       /GSB/SupprimerFamille/{id}
+    defaults: {_controller: SiteGKTGSBBundle:GSB:SupprimerFamille }
+    requirements:
+        id: \d+
+
+SiteGKTGSB_SupprimerMedicament:
+    path:       /GSB/SupprimerMedicament/{id}
+    defaults: {_controller: SiteGKTGSBBundle:GSB:SupprimerMedicament }
+    requirements:
+        id: \d+

@@ -1,0 +1,29 @@
+{#Cette vue n'hérite de personne, elle sera incluse par d'autres vues qui elle hériteront probablement du layout #}
+
+<h3>Formulaire d'article</h3>
+<div class="well">
+	<form method="post" {{form_enctype (form)}}>
+		{# Les erreurs générales du formulaire #}
+		{{ form_errors (form)}}
+		
+		<div>
+			{#Génération du label #}
+			{{form_label(form.titre,"Titre de l'article")}}
+			{#Affichage des erreurs pour ce champ précis #}
+			{{form_errors(form.titre)}}
+			{#Génération de l'input #}
+			{{form_widget(form.titre)}}
+		</div>
+		
+		<div>
+			{{form_label(form.contenu,"Contenu de l'article")}}
+			{{form_errors (form.contenu)}}
+			{{form_widget(form.contenu)}}
+		</div>
+		
+		{#Génération des champs restants #}
+		{{form_widget(form)}}
+		
+		<input type="submit" class="btn btn-primary" />
+	</form>
+</div>

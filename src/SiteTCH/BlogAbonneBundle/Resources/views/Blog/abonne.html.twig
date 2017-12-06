@@ -1,0 +1,17 @@
+{% extends "SiteTCHBlogBundle::layout.html.twig" %}
+	{% block title %}
+		Accueil - {{ parent () }}
+	{% endblock %}
+	{% block TCHblog_body %}
+		<h2>Liste des abonnés</h2>
+		<ul>
+			{% for abonne in liste_abonnes %}
+			<li>
+			<a href="{{path ('SiteTCHblogAbonne_abonnedetails', {'id':abonne.id}) }}">{{abonne.prenom}} {{abonne.nom}}</a> - {{abonne.email}}
+			</li>
+			{% endfor %}
+		</ul>
+	{% endblock %}
+	
+	
+	

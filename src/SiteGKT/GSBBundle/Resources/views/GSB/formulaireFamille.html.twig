@@ -1,0 +1,25 @@
+{#Cette vue n'hérite de personne, elle sera incluse par d'autres vues qui elle hériteront probablement du layout #}
+
+<h3>Formulaire de composition</h3>
+<div class="well">
+	<form method="post" {{form_enctype (form)}}>
+		{# Les erreurs générales du formulaire #}
+		{{ form_errors (form)}}
+		
+		<div>
+			{#Génération du label #}
+			{{form_label(form.FAM_Libelle,"Titre de la famille")}}
+			{#Affichage des erreurs pour ce champ précis #}
+			{{form_errors(form.FAM_Libelle)}}
+			{#Génération de l'input #}
+			{{form_widget(form.FAM_Libelle)}}
+		</div>
+		
+		
+		
+		{#Génération des champs restants #}
+		{{form_widget(form)}}
+		
+		<input type="submit" class="btn btn-primary" />
+	</form>
+</div>

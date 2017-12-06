@@ -1,0 +1,15 @@
+{% extends "SiteTCHBlogBundle::layout.html.twig" %}
+	{% block title %}
+	Modifier un article - {{parent()}}
+	{% endblock %}
+		
+	{% block TCHblog_body %}
+	<h2>Modifier un article</h2>
+	{% include "SiteTCHBlogBundle:Blog:formulaire.html.twig" %}
+	<p>
+		<a href ="{{path('SiteTCHblog_voir',{'id':article.id}) }}" class="btn">
+			<i class ="icon-chevron-left"></i>
+			Retour à l'article
+		</a>
+	</p>
+	{% endblock %}

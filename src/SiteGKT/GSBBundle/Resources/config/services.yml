@@ -1,0 +1,7 @@
+parameters:
+#    site_gktgsb.example.class: SiteGKT\GSBBundle\Example
+
+services:
+#    site_gktgsb.example:
+#        class: %site_gktgsb.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

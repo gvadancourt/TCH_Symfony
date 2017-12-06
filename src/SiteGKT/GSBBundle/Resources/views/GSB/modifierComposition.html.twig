@@ -1,0 +1,15 @@
+{% extends "SiteGKTGSBBundle::layout.html.twig" %}
+	{% block title %}
+	Modifier une composition - {{parent()}}
+	{% endblock %}
+		
+	{% block TCHblog_body %}
+	<h2>Modifier une composition</h2>
+	{% include "SiteGKTGSBBundle:GSB:formulaireComposition.html.twig" %}
+	<p>
+		<a href ="{{path('SiteTCHblog_voir',{'id':Composition.id}) }}" class="btn">
+			<i class ="icon-chevron-left"></i>
+			Retour à l'article
+		</a>
+	</p>
+	{% endblock %}

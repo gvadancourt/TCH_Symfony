@@ -1,0 +1,19 @@
+site_tch_blog_abonne:
+    resource: "@SiteTCHBlogAbonneBundle/Resources/config/routing.yml"
+    prefix:   /
+
+site_tch_blog:
+    resource: "@SiteTCHBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+    
+login:
+    pattern: /login
+    defaults: {_controller: SiteTCHUserBundle:Security:login }
+login_check:
+    pattern: /login_check
+logout:
+    pattern: /logout
+
+site_gktgsb:
+    resource: "@SiteGKTGSBBundle/Resources/config/routing.yml"
+    prefix:   /

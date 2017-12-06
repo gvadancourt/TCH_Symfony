@@ -1,0 +1,11 @@
+{% extends "SiteTCHBlogBundle::layout.html.twig" %}
+	{% block title %}
+	Ajouter un article - {{parent()}}
+	{% endblock %}
+		
+	{% block TCHblog_body %}
+	<h2>Ajouter un article</h2>
+	{% if is_granted ('ROLE_GESTIONNAIRE') %}
+		{% include "SiteTCHBlogBundle:Blog:formulaire.html.twig" %}
+	{% endif %}
+	{% endblock %}

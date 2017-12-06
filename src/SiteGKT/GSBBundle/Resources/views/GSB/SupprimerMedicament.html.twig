@@ -1,0 +1,20 @@
+{% extends "SiteTCHBlogBundle::layout.html.twig" %}
+{%block title %}
+Supprimer un article - {{parent()}}
+{% endblock %}
+
+{% block TCHblog_body %}
+<h2>Supprimer un médicament </h2>
+<p>
+	Etes-vous certain de vouloir supprimer le médicament "{{Medicament.getMED_Nomcommercial()}}" ?
+</p>
+{# On met l'id de l'article dans la route de l'action du formulaire #}
+<form action="{{path ('SiteGKTGSB_SupprimerMedicament',{'id':Medicament.id}) }}" method="post">
+<a href ="{{path ('SiteTCHblog_voir',{'id':Medicament.id}) }}" class="btn">
+<i class="icon-chevron-left"></i>
+Retour à l'article
+</a>
+<input type="submit" value="Supprimer" class="btn btn-danger" />
+{{ form_rest(form)}}
+</form>
+{% endblock %}

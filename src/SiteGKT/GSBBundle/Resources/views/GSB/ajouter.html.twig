@@ -1,0 +1,11 @@
+{% extends "SiteGKTGSBBundle::layout.html.twig" %}
+	{% block title %}
+	Ajouter un article - {{parent()}}
+	{% endblock %}
+		
+	{% block TCHblog_body %}
+	<h2>Ajouter d'une famille</h2>
+	{% if is_granted ('ROLE_GESTIONNAIRE') %}
+		{% include "SiteGKTGSBBundle:GSB:formulaireFamille.html.twig" %}
+	{% endif %}
+	{% endblock %}

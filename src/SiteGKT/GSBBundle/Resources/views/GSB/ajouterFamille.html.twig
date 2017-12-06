@@ -1,0 +1,9 @@
+{% extends "SiteGKTGSBBundle::layout.html.twig" %}
+	{% block title %}
+	Ajouter une famille - {{parent()}}
+	{% endblock %}
+		
+	{% block TCHblog_body %}
+	<h2>Ajouter une famille</h2>
+		{% include "SiteGKTGSBBundle:GSB:formulaireFamille.html.twig" %}
+	{% endblock %}

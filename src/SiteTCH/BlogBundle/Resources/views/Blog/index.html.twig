@@ -1,0 +1,19 @@
+{% extends "SiteTCHBlogBundle::layout.html.twig" %}
+	{% block title %}
+		Accueil - {{ parent () }}
+	{% endblock %}
+	{% block TCHblog_body %}
+		<h2>Liste des articles</h2>
+		<ul>
+		{% if articles | length > 0 %}
+			{% for article in articles %}
+			<li>
+				<a href="{{path ('SiteTCHblog_voir', {'id':article.id}) }}">{{article.titre}}</a> par {{article.auteur}},le {{article.date | date('d/m/Y')}}
+			</li>
+			{% endfor %}
+		{% endif %}
+		{% if articles | length == 0 %}
+		<p>Aucun article dans cette catégorie</p>
+		{% endif %}
+		</ul>
+	{% endblock %}

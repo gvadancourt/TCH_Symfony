@@ -1,0 +1,9 @@
+site_tch_blog_abonne_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: SiteTCHBlogAbonneBundle:BlogAbonne:index }
+SiteTCHblogAbonne_abonne:
+    path:       /abonne
+    defaults: {_controller: SiteTCHBlogAbonneBundle:BlogAbonne:abonne }
+SiteTCHblogAbonne_abonnedetails:
+    path:       /abonne/details/{id}
+    defaults: {_controller: SiteTCHBlogAbonneBundle:BlogAbonne:abonnedetails }

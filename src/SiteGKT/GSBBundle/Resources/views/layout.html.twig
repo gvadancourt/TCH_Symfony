@@ -1,0 +1,19 @@
+	{% extends "::layoutGSB.html.twig" %}
+	{% block title %}
+		Blog - {{parent() }}
+	{% endblock %}
+	{% block body %}
+	{# On définit un sous - titre commun à toutes les pages du bundle #}
+		<h1>Gestion des médicaments</h1>
+		Bonjour {{app.user.username}} - (
+		{% for role in app.user.roles %}
+		{{role}}
+		{% endfor %}
+		)
+		<a href="{{path ('logout') }}">Déconnexion</a> 
+		<hr>
+		{# On définit un nouveau bloc, que les vues du bundle pourront remplir. Ce nouveau bloc sera donc personnalisé par les templates finaux. On préfixe le nom du nouveau bloc afin d'avoir un nom unique pour notre bundle #}
+		
+		{% block TCHblog_body %}
+		{% endblock %}
+	{% endblock %}

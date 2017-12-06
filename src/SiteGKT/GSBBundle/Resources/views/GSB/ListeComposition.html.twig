@@ -1,0 +1,29 @@
+{% extends "SiteGKTGSBBundle::layout.html.twig" %}
+	{% block title %}
+		Accueil - {{ parent () }}
+	{% endblock %}
+	{% block TCHblog_body %}
+		<h2>Liste des compositions</h2>
+		<ul>		
+		{% if Compositions | length > 0 %}
+		<table border="2" width="100%">
+		<tr><th>Libellé</th><th>Actions</th></tr>
+		{% for uneComposition in Compositions %}
+			
+				<tr><td>{{uneComposition.getCOMLibelle()}}</td>
+				<td>
+					<a href ="{{path('SiteGKTGSB_ModifierComposition', {'id':uneComposition.id}) }}" class="btn">
+					<i class ="icon-edit"></i>
+					Modifier
+					</a>
+					<a href ="{{path('SiteGKTGSB_SupprimerComposition', {'id':uneComposition.id}) }}" class="btn">
+					<i class ="icon-edit"></i>
+					Supprimer
+					</a>
+				</td>
+			
+			{% endfor %}
+		</table>
+		{% endif %}
+		</ul>
+	{% endblock %}

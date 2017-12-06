@@ -1,0 +1,34 @@
+{% extends "SiteGKTGSBBundle::layout.html.twig" %}
+	{% block title %}
+		Accueil - {{ parent () }}
+	{% endblock %}
+	{% block TCHblog_body %}
+		<h2>Liste des médicaments</h2>
+		<ul>
+		{% if Medicaments | length > 0 %}
+		<table border="2" width="100%">
+		<tr><th>Nom commercial</th><th>Effets</th><th>Prix d'un échantillon</th><th>Dépot légal</th><th>Contre-indications</th><th>Actions</th></tr>
+		{% for unMedicament in Medicaments %}
+			
+				<tr><td text-align:center>{{unMedicament.MED_Nomcommercial}}</td>
+				<td>{{unMedicament.MED_Effets}}</td>
+				<td>{{unMedicament.MED_PrixEchantillon}}</td>
+				<td>{{unMedicament.MED_DepotLegal}}</td>
+				<td>{{unMedicament.MED_ContreIndic}}</td>
+				<td>
+					<a href ="{{path('SiteTCHblog_modifier', {'id':unMedicament.id}) }}" class="btn">
+					<i class ="icon-edit"></i>
+					Modifier
+					</a>
+					<a href ="{{path('SiteGKTGSB_SupprimerMedicament', {'id':unMedicament.id}) }}" class="btn">
+					<i class ="icon-edit"></i>
+					Supprimer
+					</a>
+				</td>
+			
+			{% endfor %}
+		</table>
+		{% endif %}
+	
+		</ul>
+	{% endblock %}

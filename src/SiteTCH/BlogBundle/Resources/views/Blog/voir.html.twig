@@ -1,0 +1,61 @@
+{% extends "SiteTCHBlogBundle::layout.html.twig" %}
+	{% block title %}
+	Détail d'un article - {{parent()}}
+	{% endblock %}
+		
+	{% block TCHblog_body %}
+	{# On vérifie qu'il y a bien une image liée à l'article #}
+	{% if article.image is not null %}
+		<img src="{{asset (article.image.getCheminImage() )}}" alt="{{article.image.alt}}" />
+	{% endif %}
+	<h2>{{article.titre}}</h2>
+	<i>Par  {{article.auteur}}, le {{article.date | date('d/m/Y')}}</i>
+	<p>
+	{{ article.categories.count }} Catégories :
+	{% for categorie_actuelle in article.categories %}
+		<li>
+			- {{categorie_actuelle.nom}}
+		</li>
+		{% endfor %}
+	</p>
+	<p>
+	{% if Listes_competences | length > 0 %}
+		Compétences utilisées dans cet article:
+		{% for competence_actuelle in Listes_competences %}
+			<li>
+				- {{competence_actuelle.competence.nom}} : {{competence_actuelle.niveau}}
+			</li>
+		{% endfor %}
+	{% endif %}
+	</p>
+	<div class="well">
+		{{article.contenu}}
+		
+	</div>
+	<p>
+		<a href ="{{path('SiteTCHblog_accueil')}}" class="btn">
+			<i class ="icon-chevron-left"></i>
+			Retour à la liste
+		</a>
+		<a href ="{{path('SiteTCHblog_modifier', {'id':article.id}) }}" class="btn">
+			<i class ="icon-edit"></i>
+			Modifier l'article
+		</a>
+		<a href ="{{path('SiteTCHblog_supprimer', {'id':article.id}) }}" class="btn">
+			<i class ="icon-trash"></i>
+			Supprimer l'article
+		</a>
+	</p>
+	{% if liste_commentaires | length > 0 %}
+		<h2>Liste des commentaires</h2>
+		<p>
+		{% for commentaire in liste_commentaires %}
+			<li>
+				Le {{commentaire.date|date('d/m/Y')}} Par {{commentaire.auteur}}
+				{{commentaire.contenu}}
+			</li>
+		{% endfor %}
+		</p>
+	{% endif %}
+	{% endblock %}
+	
