@@ -1,5 +1,5 @@
 <?php
-GREGOIRE
+ALLO
 	//On se place dans le namespace des contrôleurs de notre bundle
     namespace SiteGKT\GSBBundle\Controller;
 	//Notre contrôleur hérite de ce contrôleur de base, il faut donc le charger grâce au use.
